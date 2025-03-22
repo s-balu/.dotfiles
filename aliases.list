@@ -4,12 +4,9 @@
 #alias l = "ls -a"
 #alias ls = "ls -a"
 # alias l="ll -alh"
-alias v="nvim"
-alias dragon="conda activate dragons"
-alias elist="conda env list"
+alias v="vim"
 
 alias tailf="tail -f"
-alias jlremote="jupyter-lab --no-browser --port=1378"
 
 alias tr="tree -L 1"
 alias watchme="watch -n 10 \"qstat \""
@@ -29,3 +26,5 @@ alias ls="eza --git --grid --icons --no-permissions --no-time --no-user --group-
 alias l="eza -l --git --grid --icons --no-permissions --no-time --no-user --group-directories-first"
 alias lz="eza -l --git --grid --icons --no-permissions --no-time --no-user -all --group-directories-first"
 alias lza="eza -l --git --grid --icons --no-permissions --no-time --no-user --total-size -all --group-directories-first"
+
+alias qa="salloc --mem=16G -c 4 -t 06:00:00 srun --pty /bin/zsh -i"
