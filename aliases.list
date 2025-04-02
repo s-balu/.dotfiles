@@ -5,8 +5,6 @@
 #alias ls = "ls -a"
 # alias l="ll -alh"
 alias v="nvim"
-alias dragon="conda activate dragons"
-alias elist="conda env list"
 
 alias tailf="tail -f"
 alias jlremote="jupyter-lab --no-browser --port=1378"
@@ -26,6 +24,6 @@ alias deets="qstat -fx"
 alias rtouch="find . -type f -exec touch {} +"
 
 alias ls="eza --git --grid --icons --no-permissions --no-time --no-user --group-directories-first"
-alias l="eza -l --git --grid --icons --no-permissions --no-time --no-user --group-directories-first"
+alias l="eza -l --git --grid --icons --no-permissions --no-time --no-user -all --group-directories-first"
 alias lz="eza -l --git --grid --icons --no-permissions --no-time --no-user -all --group-directories-first"
-alias lza="eza -l --git --grid --icons --no-permissions --no-time --no-user --total-size -all --group-directories-first"
+alias lza="eza -l --git --grid --icons --no-permissions --total-size -all --group-directories-first"
