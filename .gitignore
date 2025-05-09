@@ -1,0 +1,46 @@
+# macOS system files
+.DS_Store
+
+# Linux/macOS backup & swap files
+*~
+*.bak
+*.swp
+*.swo
+*.tmp
+
+# Logs
+*.log
+
+# Compiled files
+*.pyc
+*.o
+*.out
+*.class
+
+# Ignore local or sensitive config overrides
+*.local
+*.secret
+*.private
+local.*
+secret.*
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.code-workspace
+
+# SSH or security-related keys (never version these)
+*.pem
+*.key
+*.crt
+*.gpg
+*.asc
+
+# Ignore zsh history (shouldn't be versioned)
+.zsh_history
+.zsh_sessions
+
+# Optional: ignore machine-specific zshrc overrides
+.zshrc.local
+.zshenv.local
+.zprofile.local
