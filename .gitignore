@@ -44,3 +44,5 @@ secret.*
 .zshrc.local
 .zshenv.local
 .zprofile.local
+
+tmux/plugins/
