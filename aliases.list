@@ -19,6 +19,7 @@ alias lz="eza -l --git --grid --icons --no-permissions --no-time --no-user -all 
 alias lza="eza -l --git --grid --icons --no-permissions --no-time --no-user --total-size -all --group-directories-first"
 
 alias code="jupyter-lab"
+alias cl="clear"
 
 alias t="tmux"
 alias tls="tmux ls"
