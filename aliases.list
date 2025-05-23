@@ -29,3 +29,5 @@ alias lz="eza -l --git --grid --icons --no-permissions --no-time --no-user -all 
 alias lza="eza -l --git --grid --icons --no-permissions --total-size -all --group-directories-first"
 
 alias stp="find . -type f -exec touch {} +"
+alias qall="qselect -u bs8772 | xargs qdel" # kill all myn jobs!
+alias lg="lazygit"
