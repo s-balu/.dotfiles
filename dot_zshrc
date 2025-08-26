@@ -122,3 +122,6 @@ eval "$(zoxide init zsh)"
 export PATH=~/.local/bin:$PATH
 
 eval "$(starship init zsh)"
+
+# Auto-reset terminal if SSH/tmux session dies
+trap 'tput reset; stty sane' HUP
