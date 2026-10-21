@@ -1,8 +1,7 @@
-live_config_reload = true
 
 [bell]
 animation = "EaseOutExpo"
-duration = 1000
+duration = 0
 
 [colors.bright]
 black = "#928374"
@@ -58,7 +57,7 @@ mods = "Command|Control"
 [scrolling]
 multiplier = 3
 
-[shell]
+[terminal.shell]
 args = ["--login"]
 program = "/bin/zsh"
 
@@ -66,6 +65,7 @@ program = "/bin/zsh"
 decorations = "transparent"
 dynamic_title = true
 opacity = 0.8
+blur = true
 startup_mode = "Fullscreen"
 title = "Alacritty"
 
@@ -76,3 +76,8 @@ lines = 49
 [window.padding]
 x = 7
 y = 7
+
+[general]
+live_config_reload = true
+
+[terminal]

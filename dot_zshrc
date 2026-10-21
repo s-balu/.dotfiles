@@ -1,9 +1,8 @@
 # Adapted from https://unix.stackexchange.com/a/113768/347104
 if [ -n "$PS1" ] && [ -z "$TMUX" ]; then
   # Adapted from https://unix.stackexchange.com/a/176885/347104
-  # Create session 'main' or attach to 'main' if already exists.
+  # Create session '0' or attach to it; ~/.tmux.conf loads the shared local config.
   tmux new-session -A -s 0
-  tmux source-file $HOME/.tmux/.tmux.conf.local
 fi
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -85,7 +84,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting vi-mode)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting vi-mode zsh-interactive-cd)
 
 source $ZSH/oh-my-zsh.sh
 prompt_context(){}
@@ -98,11 +97,11 @@ prompt_context(){}
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='nvim'
+else
+  export EDITOR='nvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -120,8 +119,16 @@ source $HOME/.dotfiles/aliases.list
 source $HOME/.cargo/env
 eval "$(zoxide init zsh)"
 export PATH=~/.local/bin:$PATH
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
 
 eval "$(starship init zsh)"
 
+if [[ -r "$HOME/.dotfiles/local/shell.local.zsh" ]]; then
+  source "$HOME/.dotfiles/local/shell.local.zsh"
+fi
+
 # Auto-reset terminal if SSH/tmux session dies
 trap 'tput reset; stty sane' HUP
+
+fortune

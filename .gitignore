@@ -46,3 +46,10 @@ secret.*
 .zprofile.local
 
 tmux/plugins/
+
+# Keep the shared tmux configuration despite the generic *.local rule.
+!tmux/tmux.conf.local
+
+# Machine-local secrets, private settings, and runtime files are never versioned.
+/local/
+/nvim/spell/*.spl

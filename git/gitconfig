@@ -1,0 +1,11 @@
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[init]
+	defaultBranch = main
+[core]
+	editor = nvim
+[include]
+	path = ~/.dotfiles/local/gitconfig.local
